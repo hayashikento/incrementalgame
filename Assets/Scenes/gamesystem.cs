@@ -24,6 +24,7 @@ public class gamesystem : MonoBehaviour
         if (counter % 60 == 0)
         {
             Debug.Log(revenue);
+            UpdateRevenue();
         }
 
         
