@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class gamesystem : MonoBehaviour
 {
-    private int counter = 0;
+    private static int counter = 0;
     private float revenue = 0.0f;
     private float rps = 20.0f;
     public GameObject revenueText;

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 475078719}
   - component: {fileID: 475078718}
   m_Layer: 0
-  m_Name: "\u30AC\u30C1\u30E3"
+  m_Name: gatya
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

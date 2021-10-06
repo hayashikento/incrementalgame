@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/gatya.unity
+- path: "Assets/image/\u5E97\u8217.unity"
   isLoaded: 1
   isActive: 1
   isSubScene: 0
