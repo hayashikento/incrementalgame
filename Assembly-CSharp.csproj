@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scenes\UImanager.cs" />
     <Compile Include="Assets\Scenes\gamesystem.cs" />
     <Compile Include="Assets\Scenes\UImanager2.cs" />
+    <Compile Include="Assets\Scenes\UImanager3.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
