@@ -57,8 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\ChangeScene.cs" />
-    <Compile Include="Assets\Scenes\gamesystem.cs" />
     <Compile Include="Assets\Scenes\UImanager.cs" />
+    <Compile Include="Assets\Scenes\gamesystem.cs" />
+    <Compile Include="Assets\Scenes\UImanager2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

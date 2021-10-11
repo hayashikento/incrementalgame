@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class gamesystem : MonoBehaviour
 {
-    private static int counter = 0;
-    private float revenue = 0.0f;
-    private float rps = 20.0f;
+    private int counter = 0;
+    private static float revenue = 0.0f;
+    private static float rps = 20.0f;
     public GameObject revenueText;
 
     // Start is called before the first frame update
@@ -31,6 +31,7 @@ public class gamesystem : MonoBehaviour
     }
     void UpdateRevenue()
     { 
+        if(revenueText != null)
         revenueText.GetComponent<Text>().text = revenue.ToString("C0");
     }
 }
