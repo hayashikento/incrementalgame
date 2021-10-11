@@ -12,16 +12,13 @@ public class UImanager2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void ClickHamButton()
+    public void ClickHamButtonBHamButtonSHamButton()
     {
         BPanel.SetActive(true);
     }
 
-    public void ClickBHamButton()
-    {
-        BPanel.SetActive(true);
-    }
-    public void ClickNoButton()
+
+    public void ClickYesButtonNoButton()
     {
         BPanel.SetActive(false);
     }
