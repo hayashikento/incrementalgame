@@ -3542,5 +3542,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: BPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4432070463763442886, guid: 2847fc6d0f0caab4ab813d119abdb19f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2847fc6d0f0caab4ab813d119abdb19f, type: 3}

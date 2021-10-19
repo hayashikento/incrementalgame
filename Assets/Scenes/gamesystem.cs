@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class gamesystem : MonoBehaviour
 {
     private int counter = 0;
-    private static float revenue = 0.0f;
+    private static float revenue = 30000.0f;
     private static float rps = 20.0f;
     public GameObject revenueText;
 
@@ -36,14 +36,17 @@ public class gamesystem : MonoBehaviour
     }
     public void ClickYesButton()
     {
+        revenue -= 1000.0f;
         rps += 20.0f; 
     }
     public void ClickYesButton1()
     {
+        revenue -= 2000.0f;
         rps += 30.0f;
     }
     public void ClickYesButton2()
     {
+        revenue -= 3000.0f;
         rps += 40.0f;
     }
 }
