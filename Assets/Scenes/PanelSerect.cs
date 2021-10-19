@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UImanager3 : MonoBehaviour
+public class PanelSerect : MonoBehaviour
 {
     [SerializeField] GameObject HKPanel;
     [SerializeField] GameObject THPanel;

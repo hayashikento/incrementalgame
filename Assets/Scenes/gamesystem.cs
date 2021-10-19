@@ -34,4 +34,16 @@ public class gamesystem : MonoBehaviour
         if(revenueText != null)
         revenueText.GetComponent<Text>().text = revenue.ToString("C0");
     }
+    public void ClickYesButton()
+    {
+        rps += 20.0f; 
+    }
+    public void ClickYesButton1()
+    {
+        rps += 30.0f;
+    }
+    public void ClickYesButton2()
+    {
+        rps += 40.0f;
+    }
 }
