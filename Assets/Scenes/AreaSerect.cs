@@ -12,6 +12,7 @@ public class AreaSerect : MonoBehaviour
     [SerializeField] GameObject TGDPanel;
     [SerializeField] GameObject SKDPanel;
     [SerializeField] GameObject KODPanel;
+    [SerializeField] GameObject EPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +49,10 @@ public class AreaSerect : MonoBehaviour
     public void ClickKOSButton()
     {
         KODPanel.SetActive(true);
+    }
+    public void ClickBButton()
+    {
+        EPanel.SetActive(false);
     }
 
     // Update is called once per frame

@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class gamesystem : MonoBehaviour
 {
     private int counter = 0;
-    private static float revenue = 30000.0f;
-    private static float rps = 20.0f;
+    private static decimal revenue = 3000000.0m;
+    private static decimal rps = 20.0m;
     public GameObject revenueText;
+    public int lebel = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class gamesystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float delta = Time.deltaTime;
+        decimal delta = (decimal)Time.deltaTime;
         revenue += rps * delta;
         if (counter % 60 == 0)
         {
@@ -36,17 +37,17 @@ public class gamesystem : MonoBehaviour
     }
     public void ClickYesButton()
     {
-        revenue -= 1000.0f;
-        rps += 20.0f; 
+        revenue -= 1000.0m;
+        rps += 20.0m; 
     }
     public void ClickYesButton1()
     {
-        revenue -= 2000.0f;
-        rps += 30.0f;
+        revenue -= 2000.0m;
+        rps += 30.0m;
     }
     public void ClickYesButton2()
     {
-        revenue -= 3000.0f;
-        rps += 40.0f;
+        revenue -= 3000.0m;
+        rps += 40.0m;
     }
 }

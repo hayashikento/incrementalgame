@@ -59,9 +59,10 @@
     <Compile Include="Assets\Scenes\ChangeScene.cs" />
     <Compile Include="Assets\Scenes\UImanager.cs" />
     <Compile Include="Assets\Scenes\PanelSerect.cs" />
+    <Compile Include="Assets\Scenes\AreaSerect.cs" />
     <Compile Include="Assets\Scenes\ProductSerect.cs" />
     <Compile Include="Assets\Scenes\gamesystem.cs" />
-    <Compile Include="Assets\Scenes\AreaSerect.cs" />
+    <Compile Include="Assets\Scenes\Scrollbar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

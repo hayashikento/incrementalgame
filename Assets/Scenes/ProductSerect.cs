@@ -7,7 +7,6 @@ public class ProductSerect : MonoBehaviour
     [SerializeField] GameObject BPanel;
     [SerializeField] GameObject BPanel1;
     [SerializeField] GameObject BPanel2;
-    private static float rps = 20.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +29,7 @@ public class ProductSerect : MonoBehaviour
 
 
 
-    public void ClickYesButton()
-    {
-        BPanel.SetActive(false);
-        rps += 20.0f;
-    }
+
     public void ClickNoButton()
     {
         BPanel.SetActive(false);
