@@ -9,18 +9,21 @@ public class gamesystem : MonoBehaviour
     private static decimal revenue = 3000000.0m;
     private static decimal rps = 20.0m;
     public GameObject revenueText;
-    public int lebel = 0;
+    public decimal GameSpeed;
+    [SerializeField] Text GamespeedText;
 
     // Start is called before the first frame update
     void Start()
     {
         UpdateRevenue();
+        UpdateGameSpeed();
     }
 
     // Update is called once per frame
     void Update()
     {
         decimal delta = (decimal)Time.deltaTime;
+        GameSpeed = (decimal)Time.deltaTime * 30;
         revenue += rps * delta;
         if (counter % 60 == 0)
         {
@@ -34,6 +37,10 @@ public class gamesystem : MonoBehaviour
     { 
         if(revenueText != null)
         revenueText.GetComponent<Text>().text = revenue.ToString("C0");
+    }
+    void UpdateGameSpeed()
+    {
+        GamespeedText.GetComponent<Text>().text = GameSpeed.ToString("00");
     }
     public void ClickYesButton()
     {
