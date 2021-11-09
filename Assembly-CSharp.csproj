@@ -56,14 +56,21 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\BHam.cs" />
     <Compile Include="Assets\Scenes\ChangeScene.cs" />
     <Compile Include="Assets\Scenes\UImanager.cs" />
     <Compile Include="Assets\Scenes\PanelSerect.cs" />
     <Compile Include="Assets\Scenes\Scrollbar.cs" />
+    <Compile Include="Assets\Scenes\SHam.cs" />
     <Compile Include="Assets\Scenes\AreaSerect.cs" />
     <Compile Include="Assets\Scenes\ProductSerect.cs" />
     <Compile Include="Assets\Scenes\gamesystem.cs" />
     <Compile Include="Assets\Scenes\Ham.cs" />
+    <Compile Include="Assets\Scenes\Product.cs" />
+    <Compile Include="Assets\Scenes\Interior.cs" />
+    <Compile Include="Assets\Scenes\Armor.cs" />
+    <Compile Include="Assets\Scenes\Newshop.cs" />
+    <Compile Include="Assets\Scenes\CM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

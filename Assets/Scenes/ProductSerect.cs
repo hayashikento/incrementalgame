@@ -7,6 +7,10 @@ public class ProductSerect : MonoBehaviour
     [SerializeField] GameObject BPanel;
     [SerializeField] GameObject BPanel1;
     [SerializeField] GameObject BPanel2;
+    [SerializeField] GameObject BPanel3;
+    [SerializeField] GameObject BPanel4;
+    [SerializeField] GameObject BPanel5;
+    [SerializeField] GameObject BPanel6;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +31,22 @@ public class ProductSerect : MonoBehaviour
         BPanel2.SetActive(true);
     }
 
+    public void ClickITButton()
+    {
+        BPanel3.SetActive(true);
+    }
+    public void ClickAMButton()
+    {
+        BPanel4.SetActive(true);
+    }
+    public void ClickCMButton()
+    {
+        BPanel5.SetActive(true);
+    }
+    public void ClickNSButton()
+    {
+        BPanel6.SetActive(true);
+    }
 
 
 
