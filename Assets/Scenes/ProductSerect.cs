@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ProductSerect : MonoBehaviour
 {
+    UnityEngine.UI.Button ham;
+    int counter = 0;
     [SerializeField] GameObject BPanel;
     [SerializeField] GameObject BPanel1;
     [SerializeField] GameObject BPanel2;
@@ -11,13 +13,27 @@ public class ProductSerect : MonoBehaviour
     [SerializeField] GameObject BPanel4;
     [SerializeField] GameObject BPanel5;
     [SerializeField] GameObject BPanel6;
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        ham = GameObject.Find("YesButton").GetComponent<UnityEngine.UI.Button>();
     }
 
     // Update is called once per frame
+    private void Update()
+    {
+        counter++;
+        if (counter % 60 == 0)
+        {
+            ham.interactable = true;
+            ham.interactable = false;
+        }
+    }
     public void ClickHamButton()
     {
         BPanel.SetActive(true);
@@ -55,3 +71,6 @@ public class ProductSerect : MonoBehaviour
         BPanel.SetActive(false);
     }
 }
+
+
+
