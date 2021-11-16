@@ -14,6 +14,9 @@ public class gamesystem : MonoBehaviour
     public static Ham hamburger = new Ham();
     public static BHam bigburger = new BHam();
     public static SHam shrimpburger = new SHam();
+    public static CHam cheeseburger = new CHam();
+    public static WCHam wcheeseburger = new WCHam();
+
 
     public static Interior interior = new Interior();
     public static Armor armor = new Armor();
@@ -68,7 +71,18 @@ public class gamesystem : MonoBehaviour
         rps += 40.0m;
         BuyProduct(shrimpburger);
     }
-
+    public void ClickYesButton3()
+    {
+        revenue -= 4000.0m;
+        rps += 50.0m;
+        BuyProduct(cheeseburger);
+    }
+    public void ClickYesButton4()
+    {
+        revenue -= 5000.0m;
+        rps += 60.0m;
+        BuyProduct(wcheeseburger);
+    }
     public void ClickITYesButton()
     {
         revenue -= 10000.0m;
