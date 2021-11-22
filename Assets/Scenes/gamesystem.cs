@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class gamesystem : MonoBehaviour
 {
     private int counter = 0;
-    private static decimal revenue = 3000000.0m;
+    public static decimal revenue = 3000000.0m;
     private static decimal rps = 20.0m;
     public GameObject revenueText;
     public decimal GameSpeed = 2;
     [SerializeField] Text GamespeedText;
+    public GameObject rpsText;
     public static Ham hamburger = new Ham();
     public static BHam bigburger = new BHam();
     public static SHam shrimpburger = new SHam();
@@ -29,6 +30,7 @@ public class gamesystem : MonoBehaviour
     {
         UpdateRevenue();
         UpdateGameSpeed();
+        UpdateRps();
     }
 
     // Update is called once per frame
@@ -53,59 +55,45 @@ public class gamesystem : MonoBehaviour
     {
         GamespeedText.GetComponent<Text>().text = GameSpeed.ToString("00");
     }
+    void UpdateRps()
+    {
+        rpsText.GetComponent<Text>().text = rps.ToString("0.0");
+    }
     public void ClickYesButton()
     {
-        revenue -= 1000.0m;
-        rps += 20.0m;
         BuyProduct(hamburger);
     }
     public void ClickYesButton1()
     {
-        revenue -= 2000.0m;
-        rps += 30.0m;
         BuyProduct(bigburger);
     }
     public void ClickYesButton2()
     {
-        revenue -= 3000.0m;
-        rps += 40.0m;
         BuyProduct(shrimpburger);
     }
     public void ClickYesButton3()
     {
-        revenue -= 4000.0m;
-        rps += 50.0m;
         BuyProduct(cheeseburger);
     }
     public void ClickYesButton4()
     {
-        revenue -= 5000.0m;
-        rps += 60.0m;
         BuyProduct(wcheeseburger);
     }
     public void ClickITYesButton()
     {
-        revenue -= 10000.0m;
-        rps += 50.0m;
         BuyProduct(interior);
     }
 
     public void ClickAMYesButton()
     {
-        revenue -= 9000.0m;
-        rps += 45.0m;
         BuyProduct(armor);
     }
     public void ClickNSYesButton()
     {
-        revenue -= 10000000.0m;
-        rps += 100.0m;
         BuyProduct(newshop);
     }
     public void ClickCMYesButton()
     {
-        revenue -= 5000.0m;
-        rps += 30.0m;
         BuyProduct(cm);
     }
 
