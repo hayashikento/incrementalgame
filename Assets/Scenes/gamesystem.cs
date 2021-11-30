@@ -17,6 +17,7 @@ public class gamesystem : MonoBehaviour
     public static SHam shrimpburger = new SHam();
     public static CHam cheeseburger = new CHam();
     public static WCHam wcheeseburger = new WCHam();
+    public static EHam eggburger = new EHam();
 
 
     public static Interior interior = new Interior();
@@ -78,6 +79,10 @@ public class gamesystem : MonoBehaviour
     public void ClickYesButton4()
     {
         BuyProduct(wcheeseburger);
+    }
+    public void ClickYesButton5()
+    {
+        BuyProduct(eggburger);
     }
     public void ClickITYesButton()
     {
