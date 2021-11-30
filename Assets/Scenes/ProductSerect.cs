@@ -46,7 +46,13 @@ public class ProductSerect : MonoBehaviour
         WCham = GameObject.Find("YesButton4").GetComponent<UnityEngine.UI.Button>();
         Eham = GameObject.Find("YesButton5").GetComponent<UnityEngine.UI.Button>();
 
-  
+        IT = GameObject.Find("ITYesButton").GetComponent<UnityEngine.UI.Button>();
+        AM = GameObject.Find("AMYesButton").GetComponent<UnityEngine.UI.Button>();
+        CM = GameObject.Find("CMYesButton").GetComponent<UnityEngine.UI.Button>();
+        NS = GameObject.Find("NSYesButton").GetComponent<UnityEngine.UI.Button>();
+
+
+
 
 
 
@@ -77,6 +83,10 @@ public class ProductSerect : MonoBehaviour
         WCham.interactable = gamesystem.revenue >= gamesystem.wcheeseburger.Revenue && !gamesystem.wcheeseburger.IsMaxLevel();
         Eham.interactable = gamesystem.revenue >= gamesystem.eggburger.Revenue && !gamesystem.eggburger.IsMaxLevel();
 
+        IT.interactable = gamesystem.revenue >= gamesystem.interior.Revenue && !gamesystem.interior.IsMaxLevel();
+        AM.interactable = gamesystem.revenue >= gamesystem.armor.Revenue && !gamesystem.armor.IsMaxLevel();
+        CM.interactable = gamesystem.revenue >= gamesystem.cm.Revenue && !gamesystem.cm.IsMaxLevel();
+        NS.interactable = gamesystem.revenue >= gamesystem.newshop.Revenue && !gamesystem.newshop.IsMaxLevel();
 
 
 
