@@ -76,6 +76,7 @@ public class ProductSerect : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+       
         ham.interactable = gamesystem.revenue >= gamesystem.hamburger.Revenue && !gamesystem.hamburger.IsMaxLevel();
         Bham.interactable = gamesystem.revenue >= gamesystem.bigburger.Revenue && !gamesystem.bigburger.IsMaxLevel();
         Sham.interactable = gamesystem.revenue >= gamesystem.shrimpburger.Revenue && !gamesystem.shrimpburger.IsMaxLevel();

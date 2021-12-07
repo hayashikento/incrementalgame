@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class WCHam : Product
 {
-    public override decimal Revenue => 6000 * Level + 6000;
+    public override decimal Revenue => 50000 * Level + 75000;
 
-    public override decimal Rps => 60 * Level + 60;
+    public override decimal Rps => 100 * Level + 300;
 }

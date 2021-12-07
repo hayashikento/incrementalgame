@@ -8,6 +8,7 @@ public class UImanager : MonoBehaviour
     [SerializeField] GameObject NPanel;
     [SerializeField] GameObject SPPanel;
     [SerializeField] GameObject ISPanel;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,4 +40,5 @@ public class UImanager : MonoBehaviour
         SPPanel.SetActive(false);
         ISPanel.SetActive(false);
     }
+
 }

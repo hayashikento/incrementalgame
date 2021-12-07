@@ -12,6 +12,7 @@ public class PanelSerect : MonoBehaviour
     [SerializeField] GameObject TGPanel;
     [SerializeField] GameObject SKPanel;
     [SerializeField] GameObject KOPanel;
+    [SerializeField] GameObject ShopMorePanel; 
         // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +51,11 @@ public class PanelSerect : MonoBehaviour
     public void ClickKOButton()
     {
         KOPanel.SetActive(true);
+    }
+
+    public void ClickShopMoreButton()
+    {
+        ShopMorePanel.SetActive(true);
     }
     public void ClickCButton()
     {

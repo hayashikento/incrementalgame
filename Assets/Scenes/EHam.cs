@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class EHam : Product
 {
-    public override decimal Revenue => 7000 * Level + 7000;
+    public override decimal Revenue => 100000 * Level + 100000;
 
-    public override decimal Rps => 50 * Level + 70;
+    public override decimal Rps => 125 * Level + 450;
 }

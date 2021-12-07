@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class gamesystem : MonoBehaviour
 {
     private int counter = 0;
-    public static decimal revenue = 3000000.0m;
-    private static decimal rps = 20.0m;
+    public static decimal revenue = 20000.0m;
+    public static decimal rps = 0.0m;
     public GameObject revenueText;
     public decimal GameSpeed = 2;
     [SerializeField] Text GamespeedText;
@@ -24,6 +24,10 @@ public class gamesystem : MonoBehaviour
     public static Armor armor = new Armor();
     public static Newshop newshop = new Newshop();
     public static CM cm = new CM();
+
+    
+
+    
 
 
     // Start is called before the first frame update
@@ -101,6 +105,12 @@ public class gamesystem : MonoBehaviour
     {
         BuyProduct(cm);
     }
+
+    public void ClickSNSButton()
+    {
+        rps++;
+    }
+
 
     private void BuyProduct(Product product)
     {

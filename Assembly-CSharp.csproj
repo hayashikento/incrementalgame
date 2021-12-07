@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scenes\ChangeScene.cs" />
     <Compile Include="Assets\Scenes\Newshop.cs" />
     <Compile Include="Assets\Scenes\UImanager.cs" />
+    <Compile Include="Assets\Scenes\EHam.cs" />
     <Compile Include="Assets\Scenes\Armor.cs" />
     <Compile Include="Assets\Scenes\PanelSerect.cs" />
     <Compile Include="Assets\Scenes\CM.cs" />
@@ -73,7 +74,6 @@
     <Compile Include="Assets\Scenes\gamesystem.cs" />
     <Compile Include="Assets\Scenes\Ham.cs" />
     <Compile Include="Assets\Scenes\Product.cs" />
-    <Compile Include="Assets\Scenes\EHam.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
