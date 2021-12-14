@@ -39,23 +39,6 @@ public class ProductSerect : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ham = GameObject.Find("YesButton").GetComponent<UnityEngine.UI.Button>();
-        Bham = GameObject.Find("YesButton1").GetComponent<UnityEngine.UI.Button>();
-        Sham = GameObject.Find("YesButton2").GetComponent<UnityEngine.UI.Button>();
-        Cham = GameObject.Find("YesButton3").GetComponent<UnityEngine.UI.Button>();
-        WCham = GameObject.Find("YesButton4").GetComponent<UnityEngine.UI.Button>();
-        Eham = GameObject.Find("YesButton5").GetComponent<UnityEngine.UI.Button>();
-
-        IT = GameObject.Find("ITYesButton").GetComponent<UnityEngine.UI.Button>();
-        AM = GameObject.Find("AMYesButton").GetComponent<UnityEngine.UI.Button>();
-        CM = GameObject.Find("CMYesButton").GetComponent<UnityEngine.UI.Button>();
-        NS = GameObject.Find("NSYesButton").GetComponent<UnityEngine.UI.Button>();
-
-
-
-
-
-
         UpdateHL();
         UpdateBL();
         UpdateSL();
@@ -68,26 +51,39 @@ public class ProductSerect : MonoBehaviour
         UpdateCML();
         UpdateNSL();
 
-
-
-
     }
 
     // Update is called once per frame
     private void Update()
     {
-       
-        ham.interactable = gamesystem.revenue >= gamesystem.hamburger.Revenue && !gamesystem.hamburger.IsMaxLevel();
-        Bham.interactable = gamesystem.revenue >= gamesystem.bigburger.Revenue && !gamesystem.bigburger.IsMaxLevel();
-        Sham.interactable = gamesystem.revenue >= gamesystem.shrimpburger.Revenue && !gamesystem.shrimpburger.IsMaxLevel();
-        Cham.interactable = gamesystem.revenue >= gamesystem.cheeseburger.Revenue && !gamesystem.cheeseburger.IsMaxLevel();
-        WCham.interactable = gamesystem.revenue >= gamesystem.wcheeseburger.Revenue && !gamesystem.wcheeseburger.IsMaxLevel();
-        Eham.interactable = gamesystem.revenue >= gamesystem.eggburger.Revenue && !gamesystem.eggburger.IsMaxLevel();
+        if (GameObject.Find("NPanel") != null)
+        {
+            ham = GameObject.Find("YesButton").GetComponent<UnityEngine.UI.Button>();
+            Bham = GameObject.Find("YesButton1").GetComponent<UnityEngine.UI.Button>();
+            Sham = GameObject.Find("YesButton2").GetComponent<UnityEngine.UI.Button>();
+            Cham = GameObject.Find("YesButton3").GetComponent<UnityEngine.UI.Button>();
+            WCham = GameObject.Find("YesButton4").GetComponent<UnityEngine.UI.Button>();
+            Eham = GameObject.Find("YesButton5").GetComponent<UnityEngine.UI.Button>();
+        }
+        if (GameObject.Find("ISPanel") != null)
+        {
+            IT = GameObject.Find("ITYesButton").GetComponent<UnityEngine.UI.Button>();
+            AM = GameObject.Find("AMYesButton").GetComponent<UnityEngine.UI.Button>();
+            CM = GameObject.Find("CMYesButton").GetComponent<UnityEngine.UI.Button>();
+            NS = GameObject.Find("NSYesButton").GetComponent<UnityEngine.UI.Button>();
+        }
 
-        IT.interactable = gamesystem.revenue >= gamesystem.interior.Revenue && !gamesystem.interior.IsMaxLevel();
-        AM.interactable = gamesystem.revenue >= gamesystem.armor.Revenue && !gamesystem.armor.IsMaxLevel();
-        CM.interactable = gamesystem.revenue >= gamesystem.cm.Revenue && !gamesystem.cm.IsMaxLevel();
-        NS.interactable = gamesystem.revenue >= gamesystem.newshop.Revenue && !gamesystem.newshop.IsMaxLevel();
+        if (ham != null) ham.interactable = gamesystem.revenue >= gamesystem.hamburger.Revenue && !gamesystem.hamburger.IsMaxLevel();
+        if (Bham != null) Bham.interactable = gamesystem.revenue >= gamesystem.bigburger.Revenue && !gamesystem.bigburger.IsMaxLevel();
+        if (Sham != null) Sham.interactable = gamesystem.revenue >= gamesystem.shrimpburger.Revenue && !gamesystem.shrimpburger.IsMaxLevel();
+        if (Cham != null) Cham.interactable = gamesystem.revenue >= gamesystem.cheeseburger.Revenue && !gamesystem.cheeseburger.IsMaxLevel();
+        if (WCham != null) WCham.interactable = gamesystem.revenue >= gamesystem.wcheeseburger.Revenue && !gamesystem.wcheeseburger.IsMaxLevel();
+        if (Eham != null) Eham.interactable = gamesystem.revenue >= gamesystem.eggburger.Revenue && !gamesystem.eggburger.IsMaxLevel();
+
+        if (IT != null) IT.interactable = gamesystem.revenue >= gamesystem.interior.Revenue && !gamesystem.interior.IsMaxLevel();
+        if (AM != null) AM.interactable = gamesystem.revenue >= gamesystem.armor.Revenue && !gamesystem.armor.IsMaxLevel();
+        if (CM != null) CM.interactable = gamesystem.revenue >= gamesystem.cm.Revenue && !gamesystem.cm.IsMaxLevel();
+        if (NS != null) NS.interactable = gamesystem.revenue >= gamesystem.newshop.Revenue && !gamesystem.newshop.IsMaxLevel();
 
 
 

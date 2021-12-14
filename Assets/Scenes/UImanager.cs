@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class UImanager : MonoBehaviour
 {
-    [SerializeField] GameObject NPanel;
-    [SerializeField] GameObject SPPanel;
-    [SerializeField] GameObject ISPanel;
+    public GameObject NPanel;
+    public GameObject SPPanel;
+    public GameObject ISPanel;
     
     // Start is called before the first frame update
     void Start()

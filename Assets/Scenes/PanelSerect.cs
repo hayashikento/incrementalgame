@@ -67,5 +67,6 @@ public class PanelSerect : MonoBehaviour
         TGPanel.SetActive(false);
         SKPanel.SetActive(false);
         KOPanel.SetActive(false);
+        ShopMorePanel.SetActive(false);
     }
 }
