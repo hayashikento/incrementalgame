@@ -64,16 +64,20 @@
     <Compile Include="Assets\Scenes\EHam.cs" />
     <Compile Include="Assets\Scenes\Armor.cs" />
     <Compile Include="Assets\Scenes\PanelSerect.cs" />
+    <Compile Include="Assets\Scenes\features.cs" />
     <Compile Include="Assets\Scenes\CM.cs" />
     <Compile Include="Assets\Scenes\CHam.cs" />
     <Compile Include="Assets\Scenes\Scrollbar.cs" />
     <Compile Include="Assets\Scenes\SHam.cs" />
     <Compile Include="Assets\Scenes\AreaSerect.cs" />
+    <Compile Include="Assets\Scenes\SNS.cs" />
     <Compile Include="Assets\Scenes\ProductSerect.cs" />
     <Compile Include="Assets\Scenes\WCHam.cs" />
     <Compile Include="Assets\Scenes\gamesystem.cs" />
     <Compile Include="Assets\Scenes\Ham.cs" />
     <Compile Include="Assets\Scenes\Product.cs" />
+    <Compile Include="Assets\Scenes\Features1.cs" />
+    <Compile Include="Assets\Scenes\prediction.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

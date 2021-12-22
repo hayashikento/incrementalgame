@@ -24,6 +24,7 @@ public class gamesystem : MonoBehaviour
     public static Armor armor = new Armor();
     public static Newshop newshop = new Newshop();
     public static CM cm = new CM();
+    public static SNS sns = new SNS();
 
     
 
@@ -42,14 +43,14 @@ public class gamesystem : MonoBehaviour
     void Update()
     {
         decimal delta = (decimal)Time.deltaTime;
-        GameSpeed = (decimal)Time.deltaTime * 30;
         revenue += rps * delta * GameSpeed;
         if (counter % 60 == 0)
         {
             Debug.Log(revenue);
         }
         UpdateRevenue();
-        
+        UpdateGameSpeed();
+        UpdateRps();
     }
     void UpdateRevenue()
     { 
@@ -108,7 +109,7 @@ public class gamesystem : MonoBehaviour
 
     public void ClickSNSButton()
     {
-        rps++;
+        BuyProduct(sns);
     }
 
 

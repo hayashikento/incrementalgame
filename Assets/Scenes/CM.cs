@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class CM : Product
 {
-    public override decimal Revenue => 5000 * Level + 5000;
+    public override decimal GetRevenue(int level) => 5000 * level + 5000;
 
     public override decimal Rps => 30 * Level + 30;
 }

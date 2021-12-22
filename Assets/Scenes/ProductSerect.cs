@@ -64,6 +64,12 @@ public class ProductSerect : MonoBehaviour
             Cham = GameObject.Find("YesButton3").GetComponent<UnityEngine.UI.Button>();
             WCham = GameObject.Find("YesButton4").GetComponent<UnityEngine.UI.Button>();
             Eham = GameObject.Find("YesButton5").GetComponent<UnityEngine.UI.Button>();
+            ham.interactable = gamesystem.revenue >= gamesystem.hamburger.NextRevenue && !gamesystem.hamburger.IsMaxLevel();
+            Bham.interactable = gamesystem.revenue >= gamesystem.bigburger.NextRevenue && !gamesystem.bigburger.IsMaxLevel();
+            Sham.interactable = gamesystem.revenue >= gamesystem.shrimpburger.NextRevenue && !gamesystem.shrimpburger.IsMaxLevel();
+            Cham.interactable = gamesystem.revenue >= gamesystem.cheeseburger.NextRevenue && !gamesystem.cheeseburger.IsMaxLevel();
+            WCham.interactable = gamesystem.revenue >= gamesystem.wcheeseburger.NextRevenue && !gamesystem.wcheeseburger.IsMaxLevel();
+            Eham.interactable = gamesystem.revenue >= gamesystem.eggburger.NextRevenue && !gamesystem.eggburger.IsMaxLevel();
         }
         if (GameObject.Find("ISPanel") != null)
         {
@@ -71,24 +77,18 @@ public class ProductSerect : MonoBehaviour
             AM = GameObject.Find("AMYesButton").GetComponent<UnityEngine.UI.Button>();
             CM = GameObject.Find("CMYesButton").GetComponent<UnityEngine.UI.Button>();
             NS = GameObject.Find("NSYesButton").GetComponent<UnityEngine.UI.Button>();
+            IT.interactable = gamesystem.revenue >= gamesystem.interior.NextRevenue && !gamesystem.interior.IsMaxLevel();
+            AM.interactable = gamesystem.revenue >= gamesystem.armor.NextRevenue && !gamesystem.armor.IsMaxLevel();
+            CM.interactable = gamesystem.revenue >= gamesystem.cm.NextRevenue && !gamesystem.cm.IsMaxLevel();
+            NS.interactable = gamesystem.revenue >= gamesystem.newshop.NextRevenue && !gamesystem.newshop.IsMaxLevel();
         }
 
-        if (ham != null) ham.interactable = gamesystem.revenue >= gamesystem.hamburger.Revenue && !gamesystem.hamburger.IsMaxLevel();
-        if (Bham != null) Bham.interactable = gamesystem.revenue >= gamesystem.bigburger.Revenue && !gamesystem.bigburger.IsMaxLevel();
-        if (Sham != null) Sham.interactable = gamesystem.revenue >= gamesystem.shrimpburger.Revenue && !gamesystem.shrimpburger.IsMaxLevel();
-        if (Cham != null) Cham.interactable = gamesystem.revenue >= gamesystem.cheeseburger.Revenue && !gamesystem.cheeseburger.IsMaxLevel();
-        if (WCham != null) WCham.interactable = gamesystem.revenue >= gamesystem.wcheeseburger.Revenue && !gamesystem.wcheeseburger.IsMaxLevel();
-        if (Eham != null) Eham.interactable = gamesystem.revenue >= gamesystem.eggburger.Revenue && !gamesystem.eggburger.IsMaxLevel();
+  
 
-        if (IT != null) IT.interactable = gamesystem.revenue >= gamesystem.interior.Revenue && !gamesystem.interior.IsMaxLevel();
-        if (AM != null) AM.interactable = gamesystem.revenue >= gamesystem.armor.Revenue && !gamesystem.armor.IsMaxLevel();
-        if (CM != null) CM.interactable = gamesystem.revenue >= gamesystem.cm.Revenue && !gamesystem.cm.IsMaxLevel();
-        if (NS != null) NS.interactable = gamesystem.revenue >= gamesystem.newshop.Revenue && !gamesystem.newshop.IsMaxLevel();
-
-
-
-
-
+        IT.interactable = gamesystem.revenue >= gamesystem.interior.NextRevenue && !gamesystem.interior.IsMaxLevel();
+        AM.interactable = gamesystem.revenue >= gamesystem.armor.NextRevenue && !gamesystem.armor.IsMaxLevel();
+        CM.interactable = gamesystem.revenue >= gamesystem.cm.NextRevenue && !gamesystem.cm.IsMaxLevel();
+        NS.interactable = gamesystem.revenue >= gamesystem.newshop.NextRevenue && !gamesystem.newshop.IsMaxLevel();
 
         UpdateHL();
         UpdateBL();
@@ -101,8 +101,6 @@ public class ProductSerect : MonoBehaviour
         UpdateAML();
         UpdateCML();
         UpdateNSL();
-
-
 
     }
 
@@ -150,14 +148,7 @@ public class ProductSerect : MonoBehaviour
         NSLText.GetComponent<Text>().text = gamesystem.newshop.Level.ToString("");
     }
 
-
-
-
-
-
-
-
-    }
+}
 
 
 

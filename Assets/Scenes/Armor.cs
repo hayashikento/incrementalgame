@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Armor : Product
 {
-    public override decimal Revenue => 9000 * Level + 9000;
+    public override decimal GetRevenue(int level) => 9000 * level + 9000;
 
     public override decimal Rps => 30 * Level + 45;
 }
