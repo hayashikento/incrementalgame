@@ -28,8 +28,6 @@ public class gamesystem : MonoBehaviour
 
     
 
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -53,9 +51,9 @@ public class gamesystem : MonoBehaviour
         UpdateRps();
     }
     void UpdateRevenue()
-    { 
-        if(revenueText != null)
-        revenueText.GetComponent<Text>().text = revenue.ToString("C0");
+    {
+        if (revenueText != null)
+            revenueText.GetComponent<Text>().text = revenue.ToString("C0");
     }
     void UpdateGameSpeed()
     {
@@ -119,5 +117,25 @@ public class gamesystem : MonoBehaviour
         revenue -= product.Revenue;
         rps += product.Rps;
     }
+
+    private features GetFeatures1(int action)
+    {
+        features features = new features();
+        features.revenue = (double)revenue;
+        features.rps = (double)rps;
+        features.hamLevel = hamburger.Level;
+        features.BhamLevel = bigburger.Level;
+        features.ShamLevel = shrimpburger.Level;
+        features.ChamLevel = cheeseburger.Level;
+        features.WChamLevel = wcheeseburger.Level;
+        features.EhamLevel = eggburger.Level;
+        features.ITLevel = interior.Level;
+        features.AMLevel = armor.Level;
+        features.CMLevel = cm.Level;
+        features.NSLevel = newshop.Level;
+
+        return features;
+    }
+    
 
 }

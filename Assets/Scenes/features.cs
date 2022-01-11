@@ -1,9 +1,13 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 public class features
 {
+   
     public double revenue;
     public double rps;
     public int hamLevel;
@@ -23,10 +27,28 @@ public class features
     public bool Cham;
     public bool WCham;
     public bool Eham;
+    public bool IT;
+    public bool AM;
+    public bool CM;
+    public bool NS;
+    public int action;
+    public DateTime now;
+   
 
-        
-    
+   
 
+ 
+        // Start is called before the first frame update
+
+}
+public class FeaturesSet
+{
+    public List<features> Features;
+
+    public FeaturesSet()
+    {
+        Features = new List<features>();
+    }
     // Start is called before the first frame update
 
 }
