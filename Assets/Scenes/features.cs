@@ -32,14 +32,8 @@ public class features
     public bool CM;
     public bool NS;
     public int action;
-    public DateTime now;
-   
-
-   
-
- 
-        // Start is called before the first frame update
-
+    public DateTime datetime;
+         // Start is called before the first frame update
 }
 public class FeaturesSet
 {
@@ -50,5 +44,5 @@ public class FeaturesSet
         Features = new List<features>();
     }
     // Start is called before the first frame update
-
 }
+

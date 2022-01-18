@@ -11,6 +11,8 @@ public abstract class Product
     public decimal Revenue => GetRevenue(Level);
     public decimal NextRevenue => GetRevenue(Level + 1);
     public abstract decimal Rps { get; }
+    public abstract int action { get; }
+
 
     public virtual bool IsMaxLevel()
     {
@@ -18,4 +20,10 @@ public abstract class Product
     }
 
     public abstract decimal GetRevenue(int level);
+
+    public bool IsBuyable()
+    {
+        return gamesystem.revenue >= NextRevenue && !IsMaxLevel();
+    }
+
 }

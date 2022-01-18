@@ -25,12 +25,16 @@ public class gamesystem : MonoBehaviour
     public static Newshop newshop = new Newshop();
     public static CM cm = new CM();
     public static SNS sns = new SNS();
+    public static FeaturesSet featuresSet = new FeaturesSet();
+    
+
+
 
     
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         UpdateRevenue();
         UpdateGameSpeed();
@@ -113,6 +117,8 @@ public class gamesystem : MonoBehaviour
 
     private void BuyProduct(Product product)
     {
+        features features = GetFeatures1(product.action);
+        featuresSet.Features.Add(features);
         product.Level++;
         revenue -= product.Revenue;
         rps += product.Rps;
@@ -133,9 +139,30 @@ public class gamesystem : MonoBehaviour
         features.AMLevel = armor.Level;
         features.CMLevel = cm.Level;
         features.NSLevel = newshop.Level;
+        features.SNSLevel = sns.Level;
+        features.ham = hamburger.IsBuyable();
+        features.Bham = bigburger.IsBuyable();
+        features.Sham = shrimpburger.IsBuyable();
+        features.Cham = cheeseburger.IsBuyable();
+        features.WCham = wcheeseburger.IsBuyable();
+        features.Eham = eggburger.IsBuyable();
+        features.IT = interior.IsBuyable();
+        features.AM = armor.IsBuyable();
+        features.CM = cm.IsBuyable();
+        features.NS = newshop.IsBuyable();
+        features.datetime = System.DateTime.Now;
+        features.action = action;
 
         return features;
     }
-    
+
+    public void ClickoutputButton()
+    {
+        var json = JsonUtility.ToJson(featuresSet);
+
+        System.IO.StreamWriter sw = new System.IO.StreamWriter("temp.json");
+        sw.Write(json);
+        sw.Close();
+    }
 
 }

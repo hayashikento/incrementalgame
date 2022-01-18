@@ -9,4 +9,5 @@ public class SNS : Product
     public override decimal GetRevenue(int level) => 0;
 
     public override decimal Rps => 1;
+    public override int action => 10;
 }
