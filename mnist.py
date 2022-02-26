@@ -18,7 +18,7 @@ print(y.shape)
 
 df_f = df_f.reset_index()
 
-some_digit = X[0]
+some_digit = X.iloc[0]
 
 y = y.astype(np.uint8)
 X_train, X_test, y_train, y_test = X[:200], X[200:], y[:200], y[200:]
