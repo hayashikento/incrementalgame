@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 public class BHam : Product
 {
-    public override decimal GetRevenue(int level) => 5000 * level + 10000;
+    public override decimal GetRevenue(int level) => 15000 * level + 10000;
 
     public override decimal Rps => 30 * Level + 150;
-    public override int action => 1;
+    public override int action => 2;
 }

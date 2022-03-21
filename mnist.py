@@ -26,5 +26,10 @@ X_train, X_test, y_train, y_test = X[:200], X[200:], y[:200], y[200:]
 sgd_clf = SGDClassifier(random_state=42)
 sgd_clf.fit(X_train, y_train)
 print(sgd_clf.predict([some_digit]))
+
 filename = 'sgd_clf.sav'
 pickle.dump(sgd_clf, open(filename, 'wb'))
+
+loaded_model = pickle.load(open(filename, 'rb'))
+result = loaded_model.score(X_test, y_test)
+print(result)

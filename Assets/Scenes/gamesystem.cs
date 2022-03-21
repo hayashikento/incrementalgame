@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 
 public class gamesystem : MonoBehaviour
@@ -27,6 +29,7 @@ public class gamesystem : MonoBehaviour
     public static CM cm = new CM();
     public static SNS sns = new SNS();
     public static FeaturesSet featuresSet = new FeaturesSet();
+    
     
 
 
@@ -132,13 +135,13 @@ public class gamesystem : MonoBehaviour
         features.rps = (double)rps;
         features.hamLevel = hamburger.Level;
         features.BhamLevel = bigburger.Level;
+        features.CMLevel = cm.Level;
+        features.AMLevel = armor.Level;
         features.ShamLevel = shrimpburger.Level;
+        features.ITLevel = interior.Level;
         features.ChamLevel = cheeseburger.Level;
         features.WChamLevel = wcheeseburger.Level;
         features.EhamLevel = eggburger.Level;
-        features.ITLevel = interior.Level;
-        features.AMLevel = armor.Level;
-        features.CMLevel = cm.Level;
         features.NSLevel = newshop.Level;
         features.SNSLevel = sns.Level;
         features.ham = hamburger.IsBuyable();
@@ -151,10 +154,12 @@ public class gamesystem : MonoBehaviour
         features.AM = armor.IsBuyable();
         features.CM = cm.IsBuyable();
         features.NS = newshop.IsBuyable();
-        features.datetime = System.DateTime.Now;
+        features.datetime = System.DateTime.Now.ToString();
         features.action = action;
 
         return features;
+
+
     }
 
     public void ClickoutputButton()
@@ -166,4 +171,36 @@ public class gamesystem : MonoBehaviour
         sw.Close();
     }
 
+    public void ClickSendButton()
+    {
+        features features = GetFeatures1(-1);
+        var json = JsonUtility.ToJson(features);
+
+        System.IO.StreamWriter sw = new System.IO.StreamWriter("f.json");
+        sw.Write(json);
+        sw.Close();
+
+        var postData = Encoding.UTF8.GetBytes(json);
+        var request = new UnityWebRequest("http://localhost:5000/", "POST")
+        {
+            uploadHandler = new UploadHandlerRaw(postData),
+            downloadHandler = new DownloadHandlerBuffer()
+        };
+        request.SetRequestHeader("Content-Type", "application/json");
+        var response = request.SendWebRequest();
+        response.completed += Completed;
+
+    }
+
+    void Completed(AsyncOperation e)
+    {
+        UnityWebRequestAsyncOperation operation = (UnityWebRequestAsyncOperation)e;
+        var pred = JsonUtility.FromJson<Prediction>(operation.webRequest.downloadHandler.text);
+    }
+
+    
+    
+
 }
+
+

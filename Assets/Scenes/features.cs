@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+[Serializable]
 public class features
 {
    
@@ -32,9 +32,10 @@ public class features
     public bool CM;
     public bool NS;
     public int action;
-    public DateTime datetime;
+    public string datetime;
          // Start is called before the first frame update
 }
+[Serializable]
 public class FeaturesSet
 {
     public List<features> Features;
